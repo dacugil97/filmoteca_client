@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="10dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    card_view:cardCornerRadius="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/teal_900"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/imgPoster"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_86sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgPoster"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_toRightOf="@+id/imgPoster"
+            android:text=""
+            android:textColor="@color/lightGray"/>
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvYear"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/imgPoster"
+            android:paddingBottom="@dimen/_7sdp"
+            android:text=""
+            android:textColor="@color/lightGray"/>
+
+        <ImageView
+            android:id="@+id/imgRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvYear"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tvRating"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="5dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

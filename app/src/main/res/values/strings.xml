@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">filmoteca</string>
+    <string name="search">Buscar</string>
+    <string name="intro">Introduzca el nombre de una película</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="email">email</string>
+    <string name="nick">nick</string>
+    <string name="password">contraseña</string>
+    <string name="confirm_password">confirmar contraseña</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be 8 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="register_tv"><u>Regístrese ahora</u></string>
+    <string name="no_account">¿No tiene cuenta?</string>
+    <string name="sign_in">Iniciar sesión</string>
+    <string name="register">Registrarse</string>
+    <string name="login_text">Inicie sesión para continuar</string>
+    <string name="register_text">Regístrese para continuar</string>
+    <string name="welcome">Bienvenid@, </string>
+
+    <!-- ERRORS -->
+    <string name="empty_error">Debe rellenar todos los campos</string>
+    <string name="password_length_error">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="match_error">Las contraseñas no coinciden</string>
+    <string name="register_error">email o nick ya en uso</string>
+    <string name="login_user_error">Usuario no encontrado</string>
+    <string name="nothing">Nada que mostrar</string>
+
+    <!-- AddMovieActivity -->
+    <string name="select_watchlist">Seleccione la WatchList</string>
+
+    <string name="recent_films">Últimas películas añadidas</string>
+    <string name="subscriptions">Tus suscripciones</string>
+    <string name="made_by">Creada por:</string>
+
+</resources>

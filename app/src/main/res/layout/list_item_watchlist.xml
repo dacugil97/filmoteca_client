@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/tools"
+    card_view:cardElevation="10dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    card_view:cardCornerRadius="7dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/teal_900"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_16sdp"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="5dp"/>
+        <TextView
+            android:id="@+id/byTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:textStyle="italic"
+            android:text="Por: "
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="@dimen/_20sdp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/byNickTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_toRightOf="@+id/byTv"
+            android:textColor="@color/aquamarine"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/_20sdp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvTotalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total: "
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"/>
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tvTotalTxt"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"
+            android:paddingBottom="5dp"/>
+
+        <ImageView
+            android:id="@+id/imgRandom"
+            android:layout_width="@dimen/_58sdp"
+            android:layout_height="@dimen/_86sdp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:id="@+id/imgPublic"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imgRandom"
+            android:paddingBottom="5dp"
+            card_view:tint="@color/white" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

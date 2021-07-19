@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailActivity"
+    android:background="@color/teal_900">
+
+    <ImageView
+        android:id="@+id/imgBackdrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"  />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgBackdrop"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:textColor="@color/lightGray"
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/imgRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/imgRating"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/lightGray"
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvYear">
+
+        <RelativeLayout
+            android:id="@+id/movieContentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="15dp">
+
+            <TextView
+                android:id="@+id/tvDurationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textStyle="italic"
+                android:textSize="16dp"
+                android:layout_toRightOf="@+id/tvDurationTitle"/>
+
+            <TextView
+                android:id="@+id/tvDirectorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvDurationTitle"/>
+
+            <TextView
+                android:id="@+id/tvDirector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textStyle="italic"
+                android:textSize="16dp"
+                android:layout_below="@+id/tvDurationTitle"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/tvDirectorTitle"/>
+
+            <TextView
+                android:id="@+id/tvCastingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvDirector"/>
+
+            <TextView
+                android:id="@+id/tvCasting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textStyle="italic"
+                android:textSize="16dp"
+                android:layout_below="@+id/tvDirector"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/tvCastingTitle"/>
+
+            <TextView
+                android:id="@+id/tvOverviewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sinopsis:"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvCasting"/>
+
+            <TextView
+                android:id="@+id/tvOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_80sdp"
+                android:textColor="@color/gray"
+                android:textSize="16dp"
+                android:layout_below="@+id/tvOverviewTitle"
+                android:textStyle="italic"
+                android:justificationMode="inter_word"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:elevation="16dp"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        android:visibility="visible"
+        app:fabCustomSize="65dp"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</RelativeLayout>

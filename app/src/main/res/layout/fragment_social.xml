@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialFragment"
+    android:background="@color/teal_700">
+
+    <TextView
+        android:id="@+id/mvTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:textColor="@color/white"
+        android:text="Social WatchLists"
+        android:textSize="@dimen/_22sdp"/>
+
+    <ImageButton
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_logout"
+        android:background="@null"
+        android:tint="@color/white"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mvTv"
+        app:iconifiedByDefault="false"
+        app:queryHint="Buscar Watchlist por nombre o autor"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/subsTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/svPublic"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/lightGray"
+        android:paddingVertical="5dp"
+        android:text="@string/subscriptions" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/socialView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subsTv">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/nothingErrorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nothing"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/nothingErrorTv"
+            android:text=":("
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nothingErrorTv"
+            android:text="):"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
